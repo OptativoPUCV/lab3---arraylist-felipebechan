@@ -13,9 +13,10 @@ typedef struct ArrayList {
 ArrayList *createList(void) {
     ArrayList * listaNueva = (ArrayList *) malloc(sizeof(ArrayList));
 
-  listaNueva-> capacity = 2; 
-  listaNueva ->data = (void *) malloc(sizeof(void) * listaNueva->capacity); 
-  listaNueva -> size = 0;
+    listaNueva ->data =  malloc(sizeof(void) * listaNueva->capacity); 
+    listaNueva -> capacity = 2; 
+    listaNueva -> size = 0;
+
     return listaNueva;
 }
 
