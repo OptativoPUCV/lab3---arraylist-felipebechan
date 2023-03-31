@@ -2,3 +2,58 @@ mi., 15 de feb. de 2023 12:35:23:
  tests:  0|6
 total_score: 0/70
 7964391
+Fri Mar 31 14:39:29 -03 2023: 
+In file included from test.c:5:
+In file included from ./arraylist.c:4:
+./arraylist.h:8:42: error: invalid application of 'sizeof' to an incomplete type 'ArrayList' (aka 'struct ArrayList')
+  ArrayList* lista = (ArrayList*) malloc(sizeof(ArrayList));
+                                         ^     ~~~~~~~~~~~
+./arraylist.h:4:16: note: forward declaration of 'struct ArrayList'
+typedef struct ArrayList ArrayList;
+               ^
+./arraylist.h:9:9: error: incomplete definition of type 'struct ArrayList'
+  lista -> capacity = 2;
+  ~~~~~ ^
+./arraylist.h:4:16: note: forward declaration of 'struct ArrayList'
+typedef struct ArrayList ArrayList;
+               ^
+./arraylist.h:10:9: error: incomplete definition of type 'struct ArrayList'
+  lista -> size = 0;
+  ~~~~~ ^
+./arraylist.h:4:16: note: forward declaration of 'struct ArrayList'
+typedef struct ArrayList ArrayList;
+               ^
+./arraylist.h:11:9: error: incomplete definition of type 'struct ArrayList'
+  lista -> data = NULL;
+  ~~~~~ ^
+./arraylist.h:4:16: note: forward declaration of 'struct ArrayList'
+typedef struct ArrayList ArrayList;
+               ^
+./arraylist.h:12:9: error: incomplete definition of type 'struct ArrayList'
+  lista -> data=  realloc(lista -> data,sizeof(ArrayList));
+  ~~~~~ ^
+./arraylist.h:4:16: note: forward declaration of 'struct ArrayList'
+typedef struct ArrayList ArrayList;
+               ^
+./arraylist.h:12:33: error: incomplete definition of type 'struct ArrayList'
+  lista -> data=  realloc(lista -> data,sizeof(ArrayList));
+                          ~~~~~ ^
+./arraylist.h:4:16: note: forward declaration of 'struct ArrayList'
+typedef struct ArrayList ArrayList;
+               ^
+./arraylist.h:12:41: error: invalid application of 'sizeof' to an incomplete type 'ArrayList' (aka 'struct ArrayList')
+  lista -> data=  realloc(lista -> data,sizeof(ArrayList));
+                                        ^     ~~~~~~~~~~~
+./arraylist.h:4:16: note: forward declaration of 'struct ArrayList'
+typedef struct ArrayList ArrayList;
+               ^
+In file included from test.c:5:
+./arraylist.c:13:12: error: redefinition of 'createList'
+ArrayList *createList(void) {
+           ^
+./arraylist.h:7:12: note: previous definition is here
+ArrayList *createList(void) {
+           ^
+8 errors generated.
+Compilation failed
+0996aac
