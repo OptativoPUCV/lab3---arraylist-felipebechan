@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "arraylist.h"
 
+//normal array
 typedef struct ArrayList {
     void **data;
     int capacity;
@@ -10,15 +11,14 @@ typedef struct ArrayList {
 } ArrayList;
 
 ArrayList *createList(void) {
-  ArrayList * l= (ArrayList*)malloc(sizeof(ArrayList));
+    ArrayList * l= (ArrayList*)malloc(sizeof(ArrayList));
 
-  l->data= malloc(sizeof(void*)*2);
+    l->data= malloc(sizeof(void*)*2);
 
-  l->capacity=2;
-  l->size=0;
+    l->capacity=2;
+    l->size=0;
   
   return l;
-  
 }
 
 void append(ArrayList * l, void * data){

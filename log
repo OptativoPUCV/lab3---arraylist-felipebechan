@@ -109,3 +109,30 @@ ArrayList *createList(void) {
 3 errors generated.
 Compilation failed
 4d2a4c4
+Fri Mar 31 14:44:22 -03 2023: 
+ arraylist.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+./arraylist.c:7:16: error: redefinition of 'ArrayList'
+typedef struct ArrayList {
+               ^
+./arraylist.h:4:16: note: previous definition is here
+typedef struct ArrayList {
+               ^
+In file included from test.c:5:
+./arraylist.c:11:3: error: typedef redefinition with different types ('struct (unnamed struct at ./arraylist.c:7:16)' vs 'struct ArrayList')
+} ArrayList;
+  ^
+./arraylist.h:8:3: note: previous definition is here
+} ArrayList;
+  ^
+In file included from test.c:5:
+./arraylist.c:13:12: error: redefinition of 'createList'
+ArrayList *createList(void) {
+           ^
+./arraylist.h:10:12: note: previous definition is here
+ArrayList *createList(void) {
+           ^
+3 errors generated.
+Compilation failed
+ba7826e
