@@ -163,3 +163,7 @@ ArrayList *createList(void) {
 3 errors generated.
 Compilation failed
 84f8289
+Fri Mar 31 14:45:03 -03 2023: 
+ tests:  0|6
+total_score: 0/70
+be0a6f9
