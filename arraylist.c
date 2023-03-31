@@ -13,16 +13,25 @@ typedef struct ArrayList {
 ArrayList *createList(void) {
     ArrayList * listaNueva = (ArrayList *) malloc(sizeof(ArrayList));
 
-    listaNueva ->data =  malloc(sizeof(void) * listaNueva->capacity); 
+    listaNueva -> data =  malloc(sizeof(void) * listaNueva->capacity); 
     listaNueva -> capacity = 2; 
     listaNueva -> size = 0;
 
     return listaNueva;
 }
 
-void append(ArrayList * l, void * data){
 
+// xd 
+void append(ArrayList *l, void *data) {
+
+    if (l -> capacity == l -> size) {
+        l -> capacity *= 2;
+        l -> data = realloc(l -> data, sizeof(void*) * l->capacity);
+    }
+    
+    l -> data [l -> size++] = data;
 }
+
 
 void push(ArrayList * l, void * data, int i){
 

@@ -185,3 +185,9 @@ Fri Mar 31 14:51:07 -03 2023:
  tests:  1|5
 total_score: 10/70
 e067a18
+Fri Mar 31 14:57:31 -03 2023: 
+ arraylist.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ tests:  3|4
+total_score: 20/70
+65692aa
