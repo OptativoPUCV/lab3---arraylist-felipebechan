@@ -71,9 +71,9 @@ void* pop(ArrayList* l, int i) {
     if (i >= 0) 
         {
             
-        for (int k = i; k < l -> size - 1; k++)
+        for (int j = i; j < l -> size - 1; j++)
         {
-            l->data[k] = l -> data[k + 1];
+            l->data[j] = l -> data[j + 1];
         }
         elim = l -> data[i];
     } 
