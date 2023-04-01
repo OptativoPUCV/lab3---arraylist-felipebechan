@@ -219,3 +219,9 @@ Sat Apr  1 20:37:31 -03 2023:
  tests:  8|2
 total_score: 40/70
 51c79b0
+Sat Apr  1 20:38:30 -03 2023: 
+ arraylist.c | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+ tests:  8|2
+total_score: 40/70
+be47149

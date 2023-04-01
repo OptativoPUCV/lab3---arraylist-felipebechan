@@ -57,21 +57,29 @@ void push(ArrayList *l, void *data, int i) {
 
 
 void* pop(ArrayList* l, int i) {
-    if (l -> size == 0) {
+    if (l -> size == 0)
+    {
         return NULL;
     }
 
     void* elim = 0;
-    if (i < 0) {
-        i = l->size + i;
+
+    if (i < 0)
+    {
+        i = l -> size + i;
     }
-    if (i >= 0) {
-        for (int k = i; k < l->size - 1; k++) {
-            l->data[k] = l->data[k + 1];
+    if (i >= 0) 
+        {
+            
+        for (int k = i; k < l -> size - 1; k++)
+        {
+            l->data[k] = l -> data[k + 1];
         }
-        elim = l->data[i];
-    } else {
-        elim = l->data[(l->size) + 1];
+        elim = l -> data[i];
+    } 
+    else 
+    {
+        elim = l -> data[(l->size) + 1];
     }
     
     l->size--;
