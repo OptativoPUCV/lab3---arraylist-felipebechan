@@ -197,3 +197,13 @@ Fri Mar 31 15:04:14 -03 2023:
  tests:  5|3
 total_score: 30/70
 2d7a438
+Sat Apr  1 20:34:17 -03 2023: 
+ arraylist.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+In file included from test.c:5:
+./arraylist.c:75:17: error: variable 'i' is uninitialized when used within its own initialization [-Werror,-Wuninitialized]
+    for(int i = i; i < l -> size; i++) 
+            ~   ^
+1 error generated.
+Compilation failed
+dd01679
