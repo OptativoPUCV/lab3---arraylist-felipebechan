@@ -207,3 +207,9 @@ In file included from test.c:5:
 1 error generated.
 Compilation failed
 dd01679
+Sat Apr  1 20:34:53 -03 2023: 
+ arraylist.c | 29 ++++++++++++-----------------
+ 1 file changed, 12 insertions(+), 17 deletions(-)
+ tests:  8|2
+total_score: 40/70
+279f41c

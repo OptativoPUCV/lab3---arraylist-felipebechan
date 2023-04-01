@@ -56,28 +56,23 @@ void push(ArrayList *l, void *data, int i) {
 }
 
 
-void* pop(ArrayList *l, int i){
-    if(l == NULL || l -> size == 0) return NULL;
-
-    void* eliminado = NULL;
-
-    if(i < 0) {
-        i = l -> size + i;
+void* pop(ArrayList * l, int i){
+  
+  void* aux=0;
+  if(i>=0){
+    aux=l->data[i];
+  } else {
+    aux=l->data[(l->size)+1];
+  }
+  if(l->size==0) return NULL;
+  if(i<0) i=l->size+i;
+  if(i>=0){
+    for(int k = i ; k<l->size-1;k++){
+      l->data[k]=l->data[k+1];
     }
-
-    if(i >= l -> size || i < 0) {
-        return NULL;
-    }
-
-    eliminado = l -> data[i];
-    l -> size --;
-
-    for(int i = i; i < l -> size; i++) 
-    {
-    l -> data[i] = l -> data[i + 1];
-    }
-
-    return eliminado;
+  }
+  l-> size --;
+  return aux;
 }
 void* get(ArrayList * l, int i){
     return NULL;
