@@ -88,17 +88,17 @@ void* pop(ArrayList* l, int i) {
 
 
 void* get(ArrayList* l, int i) {
-    if (i < 0 && i + l->size < 0) 
+    if (i < 0 && i + l -> size < 0) 
     {
         return NULL;
     } 
     else if (i < 0) 
     {
-        i += l->size;
+        i += l -> size;
     }
-    if (i >= 0 && i < l->size) 
+    if (i >= 0 && i < l -> size) 
     {
-        return l->data[i];
+        return l -> data[i];
     } 
     else 
     {    
@@ -112,6 +112,18 @@ int get_size(ArrayList * l){
 }
 
 //remove elements
-void clean(ArrayList * l){
-    
+void clean(ArrayList * list) {
+ 
+    if (list -> size == 0) 
+    {
+        return;
+    }
+
+    for (int i = 0; i < list->size; i++) 
+    {
+        pop(list, i);
+    }
+
+    list -> size = 0;
 }
+
